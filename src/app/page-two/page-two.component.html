@@ -1,0 +1,22 @@
+<div>
+  <p>
+    page-two works!
+  </p>
+  <p>
+    Is there is a city? {{ city ? "Yes, it's "+displayCity() : "No!"}}
+  </p>
+  <input type='radio' id="status" (checked)="status">
+  <label for="status">Activiate: </label>
+  
+  {{getUserStatus()}}
+  <br>
+  <button class="btn btn-primary" (click)="deAct()">Get Alerted</button>
+  
+
+  <br><br>
+  <input [(ngModel)]="city" type="text">
+  <p *ngIf="city == 'Chicago'; else notChic ">Chicago is the 3rd largest city in the USA</p>
+  <ng-template #notChic>not Chicago?</ng-template>
+</div>
+
+
