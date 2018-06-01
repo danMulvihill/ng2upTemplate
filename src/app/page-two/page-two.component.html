@@ -10,7 +10,9 @@
   
   {{getUserStatus()}}
   <br>
-  <button class="btn btn-primary" (click)="deAct()">Get Alerted</button>
+  <p [textContent]="getUserStatus()"></p>
+  <hr>
+  <button class="btn btn-primary" (click)="deAct()">Kill it!</button>
   
 
   <br><br>
