@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { METHODS } from 'http';
 
 @Component({
   selector: 'app-page-two',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-two.component.scss']
 })
 export class PageTwoComponent implements OnInit {
-  private city = "Battleboro, NH";
+  private city = "BATTLEBORO";
+  private C = this.city.charAt(0).toUpperCase();
   status: boolean;
  
   constructor() { 
@@ -17,16 +19,22 @@ export class PageTwoComponent implements OnInit {
   ngOnInit() {
   }
   displayCity(){
-    return this.city;
+    return this.city.charAt(0).toUpperCase()
   }
 
   getUserStatus(){
-      this.status = true;
+      this.status = false;
       return this.status;
   }
 
+  changeStatus(){
+    this.status = !this.status;
+    return this.status;
+    
+  }
+
   deAct(){
-    alert("Dead!");
-    this.city = "Dead";
+    if (this.city=="Deadwood") this.city = "Battleboro";
+    else this.city = "Deadwood";
   }
 }

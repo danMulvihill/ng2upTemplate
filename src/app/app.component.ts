@@ -23,10 +23,7 @@ import { Component } from '@angular/core';
 
         </nav>
       
-      <router-outlet></router-outlet>
-
-      `,
-      styles: []
+      <router-outlet></router-outlet>` 
 })
 export class AppComponent {
   title = 'Angular 2+';

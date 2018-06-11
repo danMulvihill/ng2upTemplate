@@ -11,6 +11,9 @@ import { FormComponent } from './form/form.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { HomeComponent } from './home/home.component';
 
+import { GenServiceService } from './gen-service.service';
+import { SolarService } from './solar.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SolarService, GenServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,22 +3,31 @@
     page-two works!
   </p>
   <p>
-    Is there is a city? {{ city ? "Yes, it's "+displayCity() : "No!"}}
+    What is your favorite city? {{ city ? "It's "+displayCity() : "None?"}}
   </p>
-  <input type='radio' id="status" (checked)="status">
-  <label for="status">Activiate: </label>
-  
-  {{getUserStatus()}}
-  <br>
-  <p [textContent]="getUserStatus()"></p>
   <hr>
-  <button class="btn btn-primary" (click)="deAct()">Kill it!</button>
+ 
   
 
-  <br><br>
+  
   <input [(ngModel)]="city" type="text">
-  <p *ngIf="city == 'Chicago'; else notChic ">Chicago is the 3rd largest city in the USA</p>
+  <p *ngIf="city.toUpperCase() == 'CHICAGO';">Chicago is the 3rd largest city in the USA</p>
+  <p *ngIf="city.toUpperCase() == 'PARIS';">The one in Texas, or France?</p>
+  <p *ngIf="city.toUpperCase() == 'SAN FRANCISCO';">Spanish priests first established a missionary there in 1776, the same year English colonists on the other side of the contenient declared independence from England.</p>
   <ng-template #notChic>not Chicago?</ng-template>
+  <br><br>
+  <button class="btn btn-primary" (click)="deAct()">I change my mind.</button>
+
+
+<hr>
+<input type='radio' id="status" (change)="changeStatus()" [checked]="status"><label for="status">Status: </label> {{status}}
+<br>
+<button (click)="changeStatus()">Toggle Status</button>
+<hr>
+
 </div>
+
+
+
 
 

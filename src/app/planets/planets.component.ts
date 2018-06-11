@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./planets.component.scss']
 })
 export class PlanetsComponent implements OnInit {
+  name: string = "bob";
   planets: object[];
   constructor() { 
 
