@@ -11,13 +11,13 @@ import { Component } from '@angular/core';
               <a class="nav-link" routerLink="">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="two">Page Two</a>
+              <a class="nav-link" routerLink="two">Structure</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="table">Table of Planets</a>
+              <a class="nav-link" routerLink="table">Table</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="login">Login</a>
+              <a class="nav-link" routerLink="login">Forms</a>
             </li>
           </ul>
 

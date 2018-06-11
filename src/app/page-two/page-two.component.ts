@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './page-two.component.html',
   styleUrls: ['./page-two.component.scss']
 })
-export class PageTwoComponent implements OnInit {
+export class PageTwoComponent {
   private city = "BATTLEBORO";
   private C = this.city.charAt(0).toUpperCase();
   status: boolean;
@@ -16,8 +16,6 @@ export class PageTwoComponent implements OnInit {
     
   }
       
-  ngOnInit() {
-  }
   displayCity(){
     return this.city.charAt(0).toUpperCase()
   }
